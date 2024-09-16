@@ -1,0 +1,171 @@
+/* General reset for consistent box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+/* Root container settings */
+#root {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Page title */
+h1 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Input field for new task */
+input[type="text"] {
+  width: calc(100% - 110px);
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px;
+  transition: border-color 0.3s ease;
+}
+
+/* Change border color on focus */
+input[type="text"]:focus {
+  outline: none;
+  border-color: #646cff;
+}
+
+/* Add task button */
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #646cff;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #4b51cc;
+}
+
+button:active {
+  background-color: #2c2f89;
+}
+
+/* Task list container */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+  text-align: left;
+}
+
+/* Task item */
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+li:hover {
+  background-color: #f1f1f1;
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+  transform: scale(1.2);
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* Task text with optional strike-through */
+span {
+  flex: 1;
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+/* Editing input field for task */
+li input[type="text"] {
+  width: calc(100% - 90px);
+  margin-right: 10px;
+}
+
+/* Task buttons for editing and deleting */
+li button {
+  background-color: #ff4b4b;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover and active states for delete button */
+li button:hover {
+  background-color: #d74242;
+}
+
+li button:active {
+  background-color: #a63131;
+}
+
+/* Edit button styling */
+li button:first-of-type {
+  background-color: #4b51cc;
+}
+
+li button:first-of-type:hover {
+  background-color: #646cff;
+}
+
+li button:first-of-type:active {
+  background-color: #2c2f89;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+
+  input[type="text"] {
+    width: calc(100% - 80px);
+    font-size: 0.9rem;
+  }
+
+  button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  li {
+    padding: 0.8rem;
+  }
+
+  span {
+    font-size: 0.9rem;
+  }
+
+  li button {
+    padding: 0.4rem;
+    font-size: 0.8rem;
+  }
+}
